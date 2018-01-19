@@ -76,6 +76,7 @@ persist.data.iwlan.enable=true
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.aosp_usr_pref_sel=true
 
 # Keyguard
 keyguard.no_require_sim=true
