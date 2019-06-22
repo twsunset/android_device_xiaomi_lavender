@@ -133,6 +133,7 @@ persist.vendor.radio.snapshot_timer=5
 persist.radio.sib16_support=1
 persist.radio.apm_sim_not_pwdn=1
 persist.vendor.data.iwlan.enable=true
+persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # RILD
 persist.rild.nitz_plmn=
