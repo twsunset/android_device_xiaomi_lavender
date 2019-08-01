@@ -21,6 +21,32 @@
 # definition file).
 #
 
+# Gapps
+GAPPS_VARIANT := nano
+
+GAPPS_EXCLUDED_PACKAGES += \
+	Turbo \
+	Velvet \
+	GoogleTTS
+
+GAPPS_PRODUCT_PACKAGES += \
+	ActionsServices \
+	CalculatorGoogle \
+	CalendarGooglePrebuilt \
+	PrebuiltDeskClockGoogle \
+	Photos \
+	GoogleDialer \
+	GoogleContacts \
+	PrebuiltBugle \
+	LatinImeGoogle \
+	SoundPicker \
+	Wallpapers \
+	DigitalWellbeing
+
+GAPPS_FORCE_DIALER_OVERRIDES := true
+
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+
 $(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
 
 # Vendor properties
