@@ -60,7 +60,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/xiaomi/lavender
 TARGET_KERNEL_CONFIG := lavender-perf_defconfig
-#TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := 9.0.5
 
 # dtbo
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -68,7 +68,6 @@ BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_USE_SDCLANG := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
@@ -208,9 +207,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
-# Power
-TARGET_USES_INTERACTION_BOOST := true
-
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
@@ -243,11 +239,6 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 BOARD_VNDK_VERSION := current
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
-# TWRP Support
-ifeq ($(WITH_TWRP),true)
--include $(DEVICE_PATH)/twrp.mk
-endif
 
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
