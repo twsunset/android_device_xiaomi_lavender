@@ -236,6 +236,10 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge \
     libvehiclenetwork-native
 
+# HAL3 | HAL1 Switcher
+PRODUCT_PACKAGES += \
+    AdvancedSettings 
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service
