@@ -56,6 +56,9 @@ vendor/lib/libbase64.so
 vendor/lib/libgui_vendor.so
 vendor/lib/libmegface.so
 vendor/lib/libstdc++.so
+vendor/lib/libdng_sdk.so
+vendor/lib/libft2vendor.so
+vendor/lib/miwatermark.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libscveBlobDescriptor.so
 vendor/lib64/libscveBlobDescriptor_stub.so
