@@ -93,8 +93,6 @@ on post-fs-data
     mkdir /data/vendor/charge_logger 0771 system system
 
 on boot
-    start rmt_storage
-    start rfs_access
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-6
     write /dev/cpuset/background/cpus 0-1

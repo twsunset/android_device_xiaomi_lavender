@@ -466,6 +466,9 @@ on post-fs-data
     #Start move time data to /data/vendor once post-fs-data done
     start vendor.move_time_data
 
+	start vendor.qcrild
+	start vendor.qcrild2
+	
 service iop /system/vendor/bin/iop
     class main
     user root
@@ -580,13 +583,9 @@ service qcom-c_main-sh /vendor/bin/init.class_main.sh
     oneshot
 
 on property:vold.decrypt=trigger_restart_framework
-    start qcom-c_main-sh
     start config_bt_addr
     start wcnss-service
     restart vendor.audio-hal-2-0
-
-on property:persist.env.fastdorm.enabled=true
-    setprop persist.radio.data_no_toggle 1
 
 service vendor.cnd /system/vendor/bin/cnd
     class main
@@ -616,8 +615,8 @@ service vendor.rmt_storage /vendor/bin/rmt_storage
     ioprio rt 0
 
 service vendor.tftp_server /vendor/bin/tftp_server
-   class core
-   user root
+    class core
+    user root
 
 on property:vendor.wc_transport.start_hci=true
     start vendor.start_hci_filter
@@ -664,7 +663,6 @@ service vendor.port-bridge /system/vendor/bin/port-bridge
     class main
     user radio
     group radio system inet
-    disabled
     oneshot
 
 service qmiproxy /system/bin/qmiproxy
@@ -682,7 +680,6 @@ service vendor.qmuxd /system/vendor/bin/qmuxd
 
 service vendor.netmgrd /system/vendor/bin/netmgrd
     class main
-    disabled
 
 service vendor.ipacm-diag /system/vendor/bin/ipacm-diag
     class main
@@ -695,13 +692,11 @@ service vendor.ipacm /system/vendor/bin/ipacm
     class main
     user radio
     group radio inet
-    disabled
 
 service vendor.dataqti /system/vendor/bin/qti
     class main
     user radio
     group radio oem_2901 diag usb net_admin
-    disabled
 
 service vendor.dataadpl /system/vendor/bin/adpl
     class main
