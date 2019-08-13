@@ -67,7 +67,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.opengles.version=196610 
+	ro.opengles.version=196610 \
+	vendor.display.enable_optimize_refresh=1
 
 # Dual SIM
 PRODUCT_PROPERTY_OVERRIDES += \
