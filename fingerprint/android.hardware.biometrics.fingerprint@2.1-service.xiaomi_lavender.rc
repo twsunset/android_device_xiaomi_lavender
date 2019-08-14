@@ -13,4 +13,3 @@ on post-fs-data
 	copy /data/vendor/fpc/user.db /data/vendor_de/0/fpdata/user.db
 	chown system system /data/vendor_de/0/fpdata/user.db
 	rm /data/vendor/fpc/user.db
-	chown system system /sys/devices/platform/soc/soc:fingerprint_goodix/proximity_state
