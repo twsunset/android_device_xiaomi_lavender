@@ -133,7 +133,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
-	vendor.video.disable.ubwc=1
+	vendor.video.disable.ubwc=1 \
+	debug.sf.enable_hwc_vds=1 \
+	persist.debug.wfd.enable=1 \
+	persist.sys.wfd.virtual=0
 
 # Debug Options
 PRODUCT_PROPERTY_OVERRIDES += \
