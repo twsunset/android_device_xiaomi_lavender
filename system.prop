@@ -82,7 +82,6 @@ keyguard.no_require_sim=true
 
 # MIUI
 debug.sf.disable_backpressure=1
-ro.nfc.port=I2C
 
 # Media
 media.aac_51_output_enabled=true
