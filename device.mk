@@ -27,6 +27,7 @@ GAPPS_VARIANT := nano
 GAPPS_EXCLUDED_PACKAGES += \
 	Turbo \
 	Velvet \
+	GooglePackageInstaller \
 	GoogleTTS
 
 GAPPS_PRODUCT_PACKAGES += \
@@ -34,7 +35,6 @@ GAPPS_PRODUCT_PACKAGES += \
 	CalculatorGoogle \
 	CalendarGooglePrebuilt \
 	PrebuiltDeskClockGoogle \
-	Photos \
 	GoogleDialer \
 	GoogleContacts \
 	PrebuiltBugle \
