@@ -518,6 +518,7 @@ on charger
     setprop sys.usb.configfs 1
     start power_off_alarm
     start charge_logger
+	start thermal-engine
 
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
