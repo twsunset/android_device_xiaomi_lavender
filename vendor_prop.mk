@@ -93,6 +93,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.dbg.volte_avail_ovr=1 \
 	persist.dbg.vt_avail_ovr=1
 
+# OEM
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	ro.oem_unlock_supported=1
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.extension_library=libqti-perfd-client.so
