@@ -184,4 +184,4 @@ ro.vendor.qti.core_ctl_min_cpu=2
 ro.vendor.qti.core_ctl_max_cpu=4
 
 # Havoc
-ro.havoc.maintainer=VisualDrug
+ro.potato.maintainer=twsunset

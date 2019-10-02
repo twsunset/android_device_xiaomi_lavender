@@ -21,32 +21,6 @@
 # definition file).
 #
 
-# Gapps
-GAPPS_VARIANT := nano
-
-GAPPS_EXCLUDED_PACKAGES += \
-	Turbo \
-	Velvet \
-	GooglePackageInstaller \
-	GoogleTTS
-
-GAPPS_PRODUCT_PACKAGES += \
-	ActionsServices \
-	CalculatorGoogle \
-	CalendarGooglePrebuilt \
-	PrebuiltDeskClockGoogle \
-	GoogleDialer \
-	GoogleContacts \
-	PrebuiltBugle \
-	LatinImeGoogle \
-	SoundPicker \
-	Wallpapers \
-	DigitalWellbeing
-
-GAPPS_FORCE_DIALER_OVERRIDES := true
-
-$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
-
 $(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
 
 # Vendor properties
@@ -161,11 +135,11 @@ PRODUCT_COPY_FILES += \
 
 # ANT+
 PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library
+    AntHalService
+#    com.dsi.ant.antradio_library
 
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
+#PRODUCT_COPY_FILES += \
+#    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Charger
 include $(LOCAL_PATH)/rootdir/charger/charger.mk
@@ -299,8 +273,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_lavender
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_COPY_FILES += \
